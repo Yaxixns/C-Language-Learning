@@ -54,7 +54,7 @@ char *new(int n)
 }
 
 /* ---------- free: 释放 p 指向的内存块 ---------- */
-void free_mem(char *p)
+void free(char *p)
 {
     int i, n;
 
@@ -101,7 +101,7 @@ int main()
     }
 
     /* 测试 2: 释放 s1 后再分配 */
-    free_mem(s1);
+    free(s1);
     printf("已释放 s1\n");
 
     s3 = new(15);
@@ -109,8 +109,8 @@ int main()
         printf("s3 = %p (应该在 s1 原来的位置)\n", (void *)s3);
 
     /* 清理 */
-    free_mem(s2);
-    free_mem(s3);
+    free(s2);
+    free(s3);
 
     getchar();
     return 0;

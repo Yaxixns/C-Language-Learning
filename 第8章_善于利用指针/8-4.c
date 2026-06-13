@@ -7,9 +7,46 @@
 
 #include <stdio.h>
 
+void move(int *arr, int n, int m)
+{
+    int temp[100];
+    m = m % n;
+
+    for (int i = 0; i < m; i++)
+    {
+        *(temp + i) = *(arr + (n - m) + i);
+    }
+
+    for (int i = n - 1; i >= m; i--)
+    {
+        *(arr + i) = *(arr + i - m);
+    }
+
+    for (int i = 0; i < m; i++)
+    {
+        *(arr + i) = *(temp + i);
+    }
+}
+
 int main()
 {
+    int arr[100];
+    int n, m;
 
-    getchar();
+    scanf("%d %d", &n, &m);
+
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", arr + i);
+    }
+
+    move(arr, n, m);
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", *(arr + i));
+    }
+    printf("\n");
+
     return 0;
 }
