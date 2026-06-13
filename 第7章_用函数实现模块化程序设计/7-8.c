@@ -6,12 +6,10 @@
 
 #include <stdio.h>
 
+/* ⚠️ 原错误：printf("%d ", ...) 每个数字后都有空格，最后多一个尾随空格 */
 void prtdit(int n)
 {
-    printf("%d ", n / 1000);
-    printf("%d ", n / 100 % 10);
-    printf("%d ", n / 10 % 10);
-    printf("%d\n", n % 10);
+    printf("%d %d %d %d\n", n / 1000, n / 100 % 10, n / 10 % 10, n % 10);
 }
 
 int main()

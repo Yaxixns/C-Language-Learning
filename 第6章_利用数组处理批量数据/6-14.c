@@ -38,7 +38,7 @@ int main()
         }
         else
         {
-            printf("相等\n");
+            printf("0\n");   /* ✅ 相等输出0，题意要求 */
         }
     }
 

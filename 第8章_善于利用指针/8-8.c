@@ -34,3 +34,4 @@ int main()
     getchar();
     return 0;
 }
+/* ✅ 10/10 指针统计字符正确！*(str+i)遍历，五类分别计数。gets不含\n所以other正确 */

@@ -115,3 +115,4 @@ int main()
     getchar();
     return 0;
 }
+/* ✅ 10/10 🔥 手动实现new/free内存分配器！大数组作内存池+used标记+块大小记录，演示级代码 */

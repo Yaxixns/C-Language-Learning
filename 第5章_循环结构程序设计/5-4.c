@@ -3,15 +3,16 @@
  * 输入一行字符，分别统计出其中英文字母、空格、数字和其他字符的个数。
  */
 
+/* ===== 原错误版本（保留以对比学习）=====
 #include <stdio.h>
 
 int main()
 {
-    int letter = 0, space = 0, digtal = 0, other = 0;
+    int letter = 0, space = 0, digtal = 0, other = 0;  // ❌ digtal拼写 + \n被计入other
     char str[50];
     fgets(str, 50, stdin);
     int i = 0;
-    while (str[i] != '\0')
+    while (str[i] != '\0')        // ❌ \n也被当作other统计
     {
         if (str[i] >= 'A' && str[i] <= 'Z' || str[i] >= 'a' && str[i] <= 'z')
             letter++;
@@ -23,8 +24,34 @@ int main()
             other++;
         i++;
     }
-
     printf("%d %d %d %d\n", letter, space, digtal, other);
+    getchar();
+    return 0;
+}
+===== 错误版本结束 ===== */
+
+#include <stdio.h>
+
+int main()
+{
+    int letter = 0, space = 0, digit = 0, other = 0;   /* ✅ digit拼写 */
+    char str[50];
+    fgets(str, 50, stdin);
+    int i = 0;
+    while (str[i] != '\0' && str[i] != '\n')             /* ✅ 跳过\n */
+    {
+        if ((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z'))
+            letter++;
+        else if (str[i] == ' ')
+            space++;
+        else if (str[i] >= '0' && str[i] <= '9')
+            digit++;
+        else
+            other++;
+        i++;
+    }
+
+    printf("%d %d %d %d\n", letter, space, digit, other);
     getchar();
     return 0;
 }

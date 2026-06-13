@@ -24,7 +24,10 @@ void ans2(float a, float b, float c)
 }
 void ans3(float a, float b, float c)
 {
-    printf("无解\n");
+    float dt = b * b - 4 * a * c;
+    float real = -b / (2 * a);
+    float imag = sqrt(-dt) / (2 * a);        /* ✅ delta<0 有共轭复根 */
+    printf("x1=%.3f+%.3fi,x2=%.3f-%.3fi\n", real, imag, real, imag);
 }
 
 int main()

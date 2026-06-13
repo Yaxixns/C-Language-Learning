@@ -75,3 +75,4 @@ void output(int *arr, int n)
     }
     printf("\n");
 }
+/* ✅ 10/10 三函数指针运算完整！关键：max在arr[0]时防覆盖处理(max_ptr==arr→max_ptr=min_ptr) */

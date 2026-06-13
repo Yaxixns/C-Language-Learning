@@ -52,3 +52,4 @@ int main()
     getchar();
     return 0;
 }
+/* ✅ 10/10 指针数组+malloc分配不等长串！sort只换指针不挪内容，末尾free回收 — 典范！ */

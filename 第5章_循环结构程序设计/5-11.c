@@ -16,7 +16,8 @@ int main()
         sum += h;
         h /= 2.0;
     }
-    printf("共经过%.2f米，第十次反弹高度为%.2f\n", sum, h);
+    /* ⚠️ 原错误：printf("...高度为%.2f", h);  — h是2倍反弹高度，应除2 */
+    printf("共经过%.2f米，第十次反弹高度为%.2f\n", sum, h / 2.0);
     getchar();
     return 0;
 }

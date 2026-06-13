@@ -49,3 +49,4 @@ int main()
 
     return 0;
 }
+/* ✅ 10/10 int**排序整数正确！p_array存放各元素地址，sort通过二级指针比较**(array+j)交换 */

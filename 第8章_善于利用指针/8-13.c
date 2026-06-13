@@ -33,3 +33,4 @@ int main()
     getchar();
     return 0;
 }
+/* ✅ 10/10 函数指针double(*f)(double)求定积分！矩形法通用，传sin/cos/exp，经典C技巧 */

@@ -50,3 +50,4 @@ int main()
     free(a);
     return 0;
 }
+/* ✅ 10/10 约瑟夫环正确！malloc动态分配，报数到3标记淘汰，i=(i+1)%n循环，free回收 */

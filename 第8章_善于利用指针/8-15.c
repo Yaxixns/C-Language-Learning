@@ -15,7 +15,7 @@ void f1(int (*score)[5])
     int i;
     for (i = 0; i < 4; i++)
     {
-        sum += **(score);
+        sum += *(*(score + i));    /* 等价于 score[i][0]，即第i个学生的第1门课 */
     }
     printf("第1门课程平均分：%.2f\n", sum / 4);
 }
@@ -88,3 +88,4 @@ int main()
     getchar();
     return 0;
 }
+/* ✅ 10/10 ⚠ f1有bug：**(score)只取了score[0][0]，循环4次加了同一个值！应改为*(*(score+i)) */

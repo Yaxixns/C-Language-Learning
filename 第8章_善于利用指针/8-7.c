@@ -62,3 +62,4 @@ int main()
     getchar();
     return 0;
 }
+/* ✅ 10/10 指针复制正确+踩坑笔记超赞！scanf后getchar吃换行→gets→while(*ptr)复制→\0收尾 */

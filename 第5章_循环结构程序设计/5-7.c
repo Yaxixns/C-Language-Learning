@@ -6,6 +6,7 @@
  *   sum(1/k)   for k=1 to 10
  */
 
+/* ===== 原错误版本（保留以对比学习）=====
 #include <stdio.h>
 
 int main()
@@ -15,11 +16,32 @@ int main()
     for (i = 1; i <= 100; i++)
     {
         sum1 += i;
-        if (i <= 50)
+        if (i <= 50)                // ❌ sum3在这里被绑到i<=50了，但应该只到10
         {
             sum2 += i * i;
-            sum3 += 1.0 / i;
+            sum3 += 1.0 / i;        // ❌ 循环到了50，应该是1~10的倒数和
         }
+    }
+    printf("%d %d %.2f", sum1, sum2, sum3);
+    getchar();
+    return 0;
+}
+===== 错误版本结束 ===== */
+
+#include <stdio.h>
+
+int main()
+{
+    int sum1 = 0, sum2 = 0, i;
+    float sum3 = 0;
+
+    for (i = 1; i <= 100; i++)
+    {
+        sum1 += i;                           /* k=1..100      */
+        if (i <= 50)
+            sum2 += i * i;                   /* k=1..50       */
+        if (i <= 10)
+            sum3 += 1.0 / i;                 /* k=1..10       */
     }
 
     printf("%d %d %.2f", sum1, sum2, sum3);

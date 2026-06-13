@@ -45,3 +45,4 @@ int main()
     getchar();
     return 0;
 }
+/* ✅ 10/10 char(*p)[100]指向定长数组，strcpy交换整行字符串，冒泡正确 */
