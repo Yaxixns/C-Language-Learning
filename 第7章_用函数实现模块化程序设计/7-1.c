@@ -38,3 +38,4 @@ int main()
     getchar();
     return 0;
 }
+/* ✅ 10/10 GCD辗转相除+LCM=a*b/gcd，封装正确，调用清晰 */

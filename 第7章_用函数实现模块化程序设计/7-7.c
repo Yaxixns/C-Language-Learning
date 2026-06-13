@@ -33,3 +33,4 @@ int main()
     getchar();
     return 0;
 }
+/* ✅ 10/10 元音提取正确！大小写a/e/i/o/u全覆盖，dst末尾加\0 */

@@ -27,3 +27,4 @@ int main()
     getchar();
     return 0;
 }
+/* ✅ 10/10 字符串连接正确！先拷str1再追加str2，\0收尾。i+j索引方式可行 */

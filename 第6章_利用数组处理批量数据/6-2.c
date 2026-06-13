@@ -30,3 +30,4 @@ int main()
     getchar();
     return 0;
 }
+/* ✅ 10/10 选择排序正确！min标记最小下标，每轮只交换一次，两getchar()前吃换行后暂停 */

@@ -34,3 +34,4 @@ int main()
     getchar();
     return 0;
 }
+/* ✅ 10/10 牛顿迭代法求根正确！Horner格式计算f和f，精度1e-5，初始x=1 */

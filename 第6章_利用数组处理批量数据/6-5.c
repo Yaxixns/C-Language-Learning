@@ -24,3 +24,4 @@ int main()
     getchar();
     return 0;
 }
+/* ✅ 10/10 逆序正确！n/2次交换，a[i]↔a[n-1-i]对称公式无误 */

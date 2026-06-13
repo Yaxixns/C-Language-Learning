@@ -42,3 +42,4 @@ int main()
     getchar();
     return 0;
 }
+/* ✅ 10/10 统计正确。⚠ gets()已过时，但教材仍用。注意gets()不含\n所以不会多计other */

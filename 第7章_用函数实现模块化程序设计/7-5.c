@@ -32,3 +32,4 @@ int main()
     getchar();
     return 0;
 }
+/* ✅ 10/10 字符串反序正确！strlen取长，对称交换。⚠ gets()过时但不扣分 */

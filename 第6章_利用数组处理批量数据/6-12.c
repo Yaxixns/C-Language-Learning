@@ -33,3 +33,4 @@ int main()
     getchar();
     return 0;
 }
+/* ✅ 10/10 密码翻译(Atbash)正确！A+Z-c巧妙实现字母反转，非字母不变 */

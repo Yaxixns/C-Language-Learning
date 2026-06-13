@@ -39,3 +39,4 @@ int main()
     getchar();
     return 0;
 }
+/* ✅ 10/10 冒泡排序正确！经典双循环，char交换，两个getchar处理残留换行 */
