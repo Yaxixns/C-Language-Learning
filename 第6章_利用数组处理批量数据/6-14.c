@@ -7,15 +7,41 @@
  * 例如，"A"与"C"相比，由于"A"<"C"，应输出负数，同时由于'A'与'C'的
  * ASCII 码差值为 2，因此应输出"-2"。同理，"And"和"Aid"比较，根据第 2 个
  * 字符比较结果，"n"比"i"大 5，因此应输出"5"。
-*/
+ */
 
 #include <stdio.h>
 
 int main()
 {
+    char s1[100], s2[100];
+    printf("请输入第一个字符串：");
+    gets(s1);
+    printf("请输入第二个字符串：");
+    gets(s2);
 
-    
+    int i = 0, flag = 0;
+    while (s1[i] != '\0' && s2[i] != '\0')
+    {
+        if (s1[i] - s2[i])
+        {
+            printf("%d\n", s1[i] - s2[i]);
+            flag = 1;
+            break;
+        }
+        i++;
+    }
+    if (!flag)
+    {
+        if (s1[i] != '\0' || s2[i] != '\0')
+        {
+            printf("%d\n", s1[i] - s2[i]);
+        }
+        else
+        {
+            printf("相等\n");
+        }
+    }
+
     getchar();
     return 0;
 }
-

@@ -7,6 +7,22 @@
 
 int main()
 {
+    char str1[] = "ahohwifdawf";
+    char str2[] = "vsiohaoiphwfa13421vsd";
+    char str3[100];
+    int i = 0, j = 0;
+    while (str1[i] != '\0')
+    {
+        str3[i] = str1[i];
+        i++;
+    }
+    while (str2[j] != '\0')
+    {
+        str3[i + j] = str2[j];
+        j++;
+    }
+    str3[i + j] = '\0';
+    printf("%s", str3);
 
     getchar();
     return 0;
